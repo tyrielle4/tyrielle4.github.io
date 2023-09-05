@@ -33,6 +33,7 @@ h1 {
 .nav-li {
   display: inline-block;
   padding: 0 10px;
+  animation: glitch2 0.5s infinite;
 }
 
 a {
@@ -146,3 +147,41 @@ h3 {
     justify-content: center;
   }
 }
+h3{
+  color:rgb(135, 235, 230);
+  font-size:48px;
+  text-align
+}
+
+p{
+  color:rgb(0, 255, 217);
+  font-size:30px;
+  border-style:double;
+  border-color:blue;
+  border-width:15px;
+}
+
+li {
+  text-align: center;
+  color: #d9fff9;
+  font-size: 35px;
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 0;
+}
+
+/* Glitch effect*/
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-3px, -1px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }

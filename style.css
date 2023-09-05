@@ -33,7 +33,6 @@ h1 {
 .nav-li {
   display: inline-block;
   padding: 0 10px;
-  animation: glitch2 0.5s infinite;
 }
 
 a {
@@ -148,30 +147,58 @@ h3 {
   }
 }
 h3{
-  color:rgb(135, 235, 230);
+  color:skyblue;
   font-size:48px;
   text-align
+  animation:6s glow ease-in-out infinite alternate
 }
 
 p{
-  color:rgb(0, 255, 217);
+  color:aqua;
   font-size:30px;
   border-style:double;
-  border-color:blue;
-  border-width:15px;
+  border-color:white;
+  border-witdh:15px;
 }
-
-li {
-  text-align: center;
-  color: #d9fff9;
-  font-size: 35px;
-  letter-spacing: 6px;
+p{
+  
+}
+nav li {
+  text-align:left;
+  color: darkblue;
+  font-size: 30px;
+  letter-spacing: 5px;
   font-weight: 300;
   margin: 0;
   line-height: 0;
+  animation: glitch1 0.5s infinite;
 }
 
-/* Glitch effect*/
+nav li:nth-child(2) {
+  color: #0ef0e1;
+  animation: glitch2 1.0s infinite;
+}
+
+nav li:nth-child(3) {
+  color: #ff94eb;
+  animation: glitch3 1.0s infinite;
+}
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  50% {
+    transform: skew(-2deg, 0.6deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 @keyframes glitch2 {
   0% {
     transform: none;
@@ -185,3 +212,18 @@ li {
     transform: none;
     opacity: 0.25;
   }
+  @keyframes glitch3 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    50% {
+      transform: translate(3px, 1px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+  

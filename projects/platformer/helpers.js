@@ -124,7 +124,7 @@ function debug() {
   ctx.fillText("xs" + player.speedX + " x: " + player.x, 500, 200);
   ctx.fillText("ys" + player.speedY + " y: " + player.y, 500, 250);
 
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "red";
   ctx.fillText("on ground " + player.onGround, 150 + player.x, player.y - 20);
   ctx.fillText("hitx" + hitDx, 150 + player.x, player.y);
   ctx.fillText("hity" + hitDy, 150 + player.x, player.y + 20);
@@ -375,7 +375,7 @@ function deathOfPlayer() {
   );
   ctx.font = "500% serif";
   ctx.fillText(
-    "Hit any key to restart",
+    " Hit any key to restart",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 3,
     (canvas.width / 16) * 14
@@ -450,7 +450,7 @@ function drawCannons() {
       cannons[i].projectileCountdown = cannons[i].projectileCountdown + 1;
     }
 
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "red";
     ctx.save(); //save the current translation of the screen.
     ctx.translate(cannons[i].x, cannons[i].y); //you are moving the top left of the screen to the pictures location, this is because you can't rotate the image, you have to rotate the whole page
     ctx.rotate((cannons[i].rotation * Math.PI) / 180); //then you rotate. rotation is centered on 0,0 on the canvas, which is why we moved the picture to 0,0 with translate(x,y)
@@ -579,7 +579,7 @@ function createCannon(
   }
 }
 
-function createCollectable(type, x, y, gravity = 0.1, bounce = 1) {
+function createCollectable(type, x, y, gravity = 0.9, bounce = 1) {
   if (type !== "") {
     var img = document.createElement("img"); // this is not necessary; we could simply make a single element for each collectable type in the HTML instead
     img.src = collectableList[type].image;

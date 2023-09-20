@@ -3,9 +3,11 @@ body {
 }
 
 canvas {
-  background-color: lightgray;
+  background-color: skyblue;
 }
 
 img {
   display: none;
 }
+
+<img class="Sidebar-img" src="" width="200" height="300">

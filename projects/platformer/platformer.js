@@ -80,6 +80,7 @@ $(function () {
     createCannon("bottom", 700, 1000);
     createCannon("top", 1000, 1000);
     createCannon("bottom", 450, 1000);
+    createCannon("left", 900, 1000);
 
 
 

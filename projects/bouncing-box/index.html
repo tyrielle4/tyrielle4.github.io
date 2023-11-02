@@ -17,10 +17,6 @@
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
 		}
-		body{
-			background-image: url("https://tinyurl.com/2d8pyjdu");
-			
-		}
 		.board{
 			height: 100vh;
 		}
@@ -66,10 +62,10 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var positionx = 0;
-			var point = 0;
-			var speed = 10;
-			var newPositionX =20
+			var positionX = 0;
+			var points = 0;
+			var speed = 10
+			
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -77,14 +73,15 @@
 			turn it around! 
 			*/
 			function update() {
-				positionx = positionx + 10;
-				speed = -speed;
-				moveBoxTo(positionx); 
-				
-				if (conditionIsTrue) {
-					(x,y)
-
+				positionX = positionX + speed;
+				moveBoxTo(positionX)
+				if (positionX > boardWidth){
+					speed *= -1;
 				}
+                if (positionX < 0){
+					speed *= -1;
+				}
+				
 
 			};
 			/* 
@@ -93,16 +90,19 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionx = 0;
-				changeBoxText(1)
-				
+				if (speed > 0){
+				speed = speed + 3;
+				}
+				else if (speed < 0){
+					speed = speed - 3;
+				}
+				positionX = 0;
+				speed = speed + 1;
+				changeBoxText(points)
+			
 			};
-			function handleBoxClick() {
-				positionx = 0;
-				changeBoxText(2)
-				
-			};
-
+		
+        
 		})();
 	</script>
 </body>
